@@ -25,7 +25,7 @@ export const getArrayRandom = (arr = [], num = 0) => {
   return res;
 };
 
-export const throttle = (fn, threshold = 250, scope) => {
+export function throttle (fn, threshold = 250, scope) {
   let disabled = false;
   return async function () {
     const context = scope || this;
@@ -35,7 +35,9 @@ export const throttle = (fn, threshold = 250, scope) => {
     }
 
     disabled = true;
-    setTimeout(() => {}, threshold);
+    setTimeout(() => {
+      disabled = false;
+    }, threshold);
     await fn.apply(context, args);
   };
 };

@@ -1,3 +1,4 @@
+/** 默认6个坑位 */
 export const position = [
   {
     top: 50,
@@ -16,16 +17,17 @@ export const position = [
     left: 350,
   },
   {
-    top: 150,
+    top: 110,
     left: 450,
   },
   {
     top: 100,
-    left: 500,
+    left: 600,
   },
 ];
 
-export const bill = [
+/** 现有积分球，默认只展示6个 */
+export const ball = [
   {
     number: "1",
   },
